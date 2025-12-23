@@ -119,7 +119,7 @@ To run the model locally, the following files are required:
 3. `predict_business_survival.ipynb`
 
 ### Additional Resources
-- **Project Report and Presentation:** Located under /Report
+- **Project Report and Presentation:** Located under /Model
 - **Interactive Dashboard (Tableau Public):**  
   https://public.tableau.com/app/profile/kenier.ramirez6937/viz/SanDiegoCountyBusinessesAnalysis/MainDashboard?publish=yes
 
