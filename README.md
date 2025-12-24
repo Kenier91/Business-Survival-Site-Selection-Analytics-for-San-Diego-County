@@ -112,14 +112,15 @@ This project applies statistical modeling, machine learning, and spatial analysi
 
 **A Reproducible Decision-Support Tool**
 
-### Required Files
+### Required Files 
 To run the model locally, the following files are required:
 1. `best_survival_model.pkl`
 2. `preprocessor.pkl`
 3. `predict_business_survival.ipynb`
+    * Files are Located under /Model
 
 ### Additional Resources
-- **Project Report and Presentation:** Located under /Model
+- **Project Report and Presentation:** Located under /Report
 - **Interactive Dashboard (Tableau Public):**  
   https://public.tableau.com/app/profile/kenier.ramirez6937/viz/SanDiegoCountyBusinessesAnalysis/MainDashboard?publish=yes
 
