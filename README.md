@@ -117,7 +117,7 @@ To run the model locally, the following files are required:
 1. `best_survival_model.pkl`
 2. `preprocessor.pkl`
 3. `predict_business_survival.ipynb`
-    * Files are Located under /Model
+    * Files are located under /Model
 
 ### Additional Resources
 - **Project Report and Presentation:** Located under /Report
