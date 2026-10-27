@@ -1,19 +1,17 @@
-# Project: Business Survival & Site Selection Analytics for San Diego County
-### Predictive Modeling and Spatial Analysis Using Public Business Registry and Census Data
+# Strategic Location and Survival Dynamics of Businesses in San Diego County
+### A Comparative Machine Learning and Geospatial Approach
 
 ## Table of Contents
-1. [Executive Summary](#Executive-Summary)
+1. [Executive Summary](#executive-summary)
 2. [Project Overview](#project-overview)
-3. [Business Survival Predictive Model for San Diego County](#Business-Survival-Predictive-Model-for-San-Diego-County)
+3. [Business Survival Predictive Model](#business-survival-predictive-model)
 4. [Research Question & Hypotheses](#research-question--hypotheses)
-5. [Context](#context)
+5. [Context & Findings](#context--findings)
 6. [Data](#data)
-7. [Limitations](#limitations)
-8. [Delimitations](#delimitations)
-9. [Data Gathering and Cleaning](#data-gathering-and-cleaning)
-10. [Tools and Techniques](#tools-and-techniques)
-11. [Project Outcomes](#project-outcomes)
-12. [References](#references)
+7. [Limitations & Delimitations](#limitations--delimitations)
+8. [Tools and Techniques](#tools-and-techniques)
+9. [Project Outcomes](#project-outcomes)
+10. [References](#references)
 
 ---
 
@@ -21,70 +19,29 @@
 <details>
 <summary>Click to expand</summary>
 
-**Project Focus:** Predictive Modeling & Spatial Intelligence for Investment, Development, and Site Selection in San Diego County.
+**Project Focus:** Predictive Modeling, Machine Learning & Spatial Intelligence for Investment, Development, and Site Selection in San Diego County.
 
-This project delivers a validated, data-driven decision-support system for assessing business survival risk and location stability across San Diego County.
-
-Using 146,000+ registered businesses, public census data, spatial analytics, and predictive modeling, the analysis identifies where businesses are more likely to survive or fail, and which factors most strongly influence longevity.
+This project delivers a validated, data-driven decision-support system for assessing business survival risk and location stability. By evaluating a merged open-data corpus of 146,000+ registered businesses alongside public census and spatial data, this study contrasts traditional parametric modeling against advanced tree-based ensemble methods to identify key drivers of firm longevity.
 
 The results are designed to support:
-
-* Site selection
-
+* Site selection and geographic expansion
 * Real estate and housing development
-
 * Infrastructure and healthcare facility planning
-
-* Franchise and retail expansion
-
+* Franchise and retail market entry
 * Investment and lending risk assessment
 
 The project is fully reproducible, well-documented, and includes an interactive executive dashboard suitable for non-technical stakeholders.
 
-🔗 Interactive Dashboard (Tableau Public)
-https://public.tableau.com/app/profile/kenier.ramirez6937/viz/SanDiegoCountyBusinessesAnalysis/MainDashboard?publish=yes
+🔗 **Interactive Dashboard (Tableau Public):**
+[San Diego County Businesses Analysis](https://public.tableau.com/app/profile/kenier.ramirez6937/viz/SanDiegoCountyBusinessesAnalysis/MainDashboard?publish=yes)
 
-🔗 Source Code & Data
-This GitHub repository
-
-**This project uses only public data and does not involve human subjects research (IRB exempt).**
-
-
-### Primary Users
-
-* Real estate & housing developers
-
-* Infrastructure & healthcare facility planners
-
-* Franchise and retail expansion teams
-
-* Investors, lenders, and site selection analysts
-
+**This project uses only public open data and does not involve human subjects research (IRB exempt).**
 
 ### Key Outputs
-
-* Business survival probability scores across geography, industry, and business characteristics
-
-* Closure and survival rates by ZIP code, city, NAICS sector, and ownership type
-
-* Spatial risk maps and business clustering analysis
-
-* Interactive executive dashboard (non-technical friendly)
-
-
-### Business Use Cases
-
-* Real Estate & Housing Development:
-Identify ZIP codes and corridors with historically higher business survival to reduce vacancy and development risk.
-
-* Healthcare & Infrastructure Planning:
-Evaluate long-term economic stability and demand signals when selecting facility locations.
-
-* Franchise & Retail Expansion:
-Compare closure rates by industry and geography to optimize market entry decisions.
-
-* Investment & Lending:
-Assess geographic and sector-level exposure to business failure risk.
+* **Predictive Superiority:** A LightGBM model achieving 84.4% accuracy (F1-score = 0.779, ROC-AUC = 0.909).
+* **SHAP Interpretability:** Granular feature importance revealing that structural attributes (firm age, legal structure) strictly outweigh raw spatial coordinates in predicting survival.
+* **Geospatial & Unsupervised Analytics:** Unsupervised segmentation via K-Prototypes and spatial K-Means identifying latent regional business clusters.
+* **Executive Dashboard:** Interactive spatial risk maps and business clustering visualizers.
 
 </details>
 
@@ -94,37 +51,34 @@ Assess geographic and sector-level exposure to business failure risk.
 <details>
 <summary>Click to expand</summary>
 
-**Project Topic:** Predicting Business Survival in San Diego County Using Public Business Registry Data.
+**Project Topic:** Strategic Location and Survival Dynamics of Businesses in San Diego County.
 
-This project applies statistical modeling, machine learning, and spatial analysis to evaluate survival outcomes of registered businesses in San Diego County. The study assesses the feasibility of building an accurate predictive model, identifies key predictors of longevity, and translates results into actionable insights for expansion, investment, and development decisions.
+Despite the growing availability of municipal open data, municipal business registries remain underutilized for predictive decision support. Entrepreneurs frequently select expansion locations based on soft intuition or gross demographic metrics rather than non-linear risk modeling. 
 
-**IRB Status:** Exempt (no human subjects)
-
-**Note:** This repository includes a complementary predictive modeling tool intended for entrepreneurs, analysts, and investors evaluating business expansion in San Diego County
+This project applies statistical hypothesis testing, machine learning (Gradient Boosting, XGBoost, LightGBM, Random Forest, Logistic Regression), and geospatial analysis to evaluate survival outcomes of registered businesses in San Diego County. The study assesses the feasibility of building an accurate predictive model, decodes the "black box" of AI predictions using SHAP (SHapley Additive exPlanations), and translates complex geospatial market dynamics into actionable business intelligence.
 
 </details>
 
 ---
 
-## Business Survival Predictive Model for San Diego County  
+## Business Survival Predictive Model 
 <details>
 <summary>Click to expand</summary>
 
 **A Reproducible Decision-Support Tool**
 
 ### Required Files 
-To run the model locally, the following files are required:
-1. `best_survival_model.pkl`
+To run the model locally, the following files are required in your environment:
+1. `best_survival_model.pkl` (Tuned LightGBM Model)
 2. `preprocessor.pkl`
 3. `predict_business_survival.ipynb`
-    * Files are located under /Model
+    * *Files are located under the `/Model` directory.*
 
 ### Additional Resources
-- **Project Report and Presentation:** Located under /Report
-- **Interactive Dashboard (Tableau Public):**  
-  https://public.tableau.com/app/profile/kenier.ramirez6937/viz/SanDiegoCountyBusinessesAnalysis/MainDashboard?publish=yes
+- **Project Report and Presentation:** Located under the `/Report` directory.
+- **Interactive Dashboard:** Available via [Tableau Public](https://public.tableau.com/app/profile/kenier.ramirez6937/viz/SanDiegoCountyBusinessesAnalysis/MainDashboard?publish=yes).
 
-> **This repository provides an open, validated predictive model for estimating business survival probability using public San Diego County data.**
+> **This repository provides an open, validated machine learning pipeline for estimating business survival probability using public municipal and census data.**
 
 </details>
 
@@ -134,24 +88,30 @@ To run the model locally, the following files are required:
 <details>
 <summary>Click to expand</summary>
 
-**Research Question:**  
-Can a logistic regression–based predictive model be constructed using San Diego County business registry data?
+**Primary Research Question:**  
+Can a predictive machine learning model be constructed on the San Diego County Business Listings dataset to reliably estimate business survival probability and identify structural risk factors?
 
-**Hypotheses:**
-- **Null Hypothesis (H₀):** A predictive logistic regression model cannot be constructed from the research dataset.
-- **Alternate Hypothesis (H₁):** A predictive logistic regression model can be constructed from the research dataset with a model accuracy of 70% or higher.
+To formally evaluate predictive feasibility against a parametric baseline, the study tested the following:
+
+* **Null Hypothesis (H0):** A predictive parametric logistic regression model cannot be constructed from the research dataset at or above a benchmark performance threshold of an F1-Score of 0.70 (F1-Score < 0.70).
+* **Alternative Hypothesis (H1):** A predictive parametric logistic regression model can be constructed from the research dataset achieving an F1-Score of 0.70 or higher (F1-Score ≥ 0.70).
+
+**Resolution:** Standard Logistic Regression achieved an F1-score of only 0.576. We failed to reject the Null Hypothesis (H0). However, the study demonstrates that non-linear ensemble algorithms (specifically LightGBM) easily surpass this threshold (F1 = 0.779), proving that tree-based architectures are required for this highly imbalanced, complex spatial dataset.
 
 </details>
 
 ---
 
-## Context
+## Context & Findings
 <details>
 <summary>Click to expand</summary>
 
-Business survival is influenced by multiple factors, including geographic location, industry sector, firm age, ownership type, and local business clustering. Prior research (Reyes & Suárez, 2022) demonstrates that spatial and economic characteristics, such as proximity to major transportation routes and local business density, significantly influence firm longevity.
+Prior literature highlights that firm longevity is governed by a complex interaction between internal organizational attributes and external agglomeration economies (e.g., spatial clustering, market density). 
 
-This project applies logistic regression, ensemble models, and spatial analytics to identify statistically significant predictors of survival and closure, supporting evidence-based development and investment decisions in San Diego County.
+**Key Interpretive Insights (SHAP Analysis):**
+1. **Dominance of Business Age:** Model explanations reveal that firm age is the primary factor driving survival predictions. Early-stage closure rates peak sharply in the 5-10 year lifecycle stage before dropping near zero for firms operating >20 years.
+2. **Influence of Legal Ownership:** Sole proprietorships consistently reflect elevated failure risk compared to highly capitalized legal entities (Corporations, LLCs).
+3. **Secondary Impact of Geography:** Raw spatial metrics (latitude, longitude, population) offer limited predictive contribution once age and ownership structure are accounted for. Location establishes foot traffic, but internal capital dictates resilience.
 
 </details>
 
@@ -162,78 +122,38 @@ This project applies logistic regression, ensemble models, and spatial analytics
 <summary>Click to expand</summary>
 
 **Data Sources:**
-- **Active/Inactive San Diego Registered Business Listings** (City of San Diego, n.d.)
-- **2020 Census Population by ZIP Code** (SANDAG, n.d.)
+- **City of San Diego Active and Inactive Business Listings** (Records from 1926 – Nov 2025)
+- **SANDAG 2020 Census Population by ZIP Code**
+- **US Census Bureau TIGER/Line Shapefiles (2022/2020)**
 
-**Integrated Dataset:**
-- **Total Records:** 146,481 registered businesses
-- **Time Span:** 1926 – November 3, 2025
+**Integrated Analytical Corpus:**
+- **Total Validated Records:** 146,481 private-sector establishments.
+- Bounding-box coordinate sanitization and spatial joins (GeoPandas) were applied to ensure geospatial accuracy.
 
-Active and inactive listings were merged into a single dataset. ZIP codes were standardized and joined with population data. Latitude and longitude were validated using a San Diego County boundary shapefile.
-
-
-**Key Variables:**
-
-| Variable | Description / Purpose | Data Type | Type (IV/DV) |
-|----------|----------------------|----------|---------------|
-| account_status | Indicates if a business is active or inactive | Categorical | DV |
-| date_business_start | Date when the business start operations | Continuous | IV |
-| ownership_type | Type of ownership (e.g., sole proprietorship, corporation) | Categorical | IV |
-| naics_sector | High-level NAICS code representing the industry sector | Categorical | IV |
-| naics_description | Full textual description of the NAICS sector | Categorical | IV |
-| naics_code | Detailed 2–6 digit NAICS code for the specific industry | Categorical | IV |
-| address_city | City of the business location | Categorical | IV |
-| address_state | State of the business location (San Diego, CA) | Categorical | IV |
-| zip5 | ZIP code of the business location | Categorical | IV |
-| lat | Latitude coordinate for geospatial mapping | Continuous | IV |
-| lng | Longitude coordinate for geospatial mapping | Continuous | IV |
-| population | Number of persons in that ZIP code | Continuous | IV |
-
-
-**Derived Variables:**
-- **Business age:** Years since business start operations.
-- **Business group:** Categorized by business lifecycle stage.
-- **Active/Closed Rate:** Proportion of active vs. closed businesses.
-- **Business density:** Number of businesses per 1000 residents.
+**Key Features & Derived Variables:**
+* `account_status` (Target Variable: Active vs. Closed)
+* `business_age` & `age_segmentation` (Derived)
+* `business_density` (Active businesses per 1,000 residents)
+* `ownership_type` (Standardized categorical)
+* `naics_sector` (Standardized into 18 primary economic sectors)
+* `lat`, `lng`, `zip5`, `population`
 
 </details>
 
 ---
 
-## Limitations
+## Limitations & Delimitations
 <details>
 <summary>Click to expand</summary>
 
-- Potential imprecision in geospatial coordinates.
-- Only registered businesses included.
-- Population data limited to 2020 Census.
-- No financial or employment-level variables.
+### Limitations
+- **Registry Truncation:** The dataset includes only formally registered businesses, excluding informal or unregistered micro-establishments.
+- **Static Census Demographics:** Demographic features rely on static 2020 ZCTA Census baseline counts.
+- **Coordinate Boundaries:** Spatial clustering via K-Means relies on mathematical centroids rather than official administrative neighborhood boundaries.
 
-</details>
-
----
-
-## Delimitations
-<details>
-<summary>Click to expand</summary>
-
-- Focus exclusively on registered businesses within San Diego County.
-- Variables selected specifically for predictive modeling relevance.
-- Records in sectors 22 (“Utilities”) and 92 (“Public Administration”) are removed to ensure that the analysis remained focused on private-sector business activity.
-- Outliers in `date_business_start` are retained as delimitations of the study to preserve potentially meaningful cases of long-standing businesses.
-
-</details>
-
----
-
-## Data Gathering and Cleaning
-<details>
-<summary>Click to expand</summary>
-
-- Public CSV data compiled from City of San Diego and SANDAG.
-- Data cleaning includes encoding categorical variables, imputing missing values where appropriate, and validating geospatial coordinates.
-- Derived variables calculated for business age, life cycle group, active/closed rate, and business density.
-- Data sparsity is less than 10%.
+### Delimitations
+- Focus is strictly on private enterprise; Public Administration (NAICS 92) and Utilities (NAICS 22) were intentionally excluded.
+- Initial duplicate entries and "pending" status records were purged to maintain a strict binary classification scheme.
 
 </details>
 
@@ -243,14 +163,13 @@ Active and inactive listings were merged into a single dataset. ZIP codes were s
 <details>
 <summary>Click to expand</summary>
 
-- **Programming Language:** Python
-- **Statistical Tests:** Shapiro-Wilk, Levene (for assumption checking; not required for logistic regression)
-- **Handling Imbalanced Classes:** SMOTE applied to training data
-- **Modeling Approach:** Logistic Regression, Random Forest, Gradient Boosting, XGBoost, LightGBM
-- **Evaluation:** Cross-validation, holdout test set (20%)
-- **Interpretability:** SHAP analysis for feature importance
-- **Clustering:** Unsupervised segmentation to uncover meaningful data patterns
-- **Visualization:** Univariate and bivariate plots, tables, interactive dashboards
+- **Core Stack:** Python (pandas, numpy, scikit-learn)
+- **Geospatial Pipeline:** GeoPandas, Shapely, Folium, Branca
+- **Statistical Testing:** Chi-Square tests of independence, Kruskal-Wallis H-tests, Variance Inflation Factor (VIF).
+- **Data Balancing:** SMOTE (Synthetic Minority Over-sampling Technique) applied strictly to the training set.
+- **Machine Learning Classifiers:** Logistic Regression, Random Forest, Gradient Boosting, XGBoost, LightGBM (Best Model).
+- **Unsupervised Clustering:** K-Prototypes (for mixed data) and K-Means (for spatial coordinates).
+- **AI Interpretability:** SHAP (SHapley Additive exPlanations) for global and local feature importance.
 
 </details>
 
@@ -260,22 +179,15 @@ Active and inactive listings were merged into a single dataset. ZIP codes were s
 <details>
 <summary>Click to expand</summary>
 
-**Key Results**
+**Empirical Results**
+* **Model Validation:** Non-linear gradient boosting (LightGBM) effectively captures complex decision boundaries, achieving an 84.4% accuracy, 0.779 F1-score, and 0.909 ROC-AUC.
+* **Risk Drivers:** Validated that internal organizational structure (age, legal formation) supersedes geographical location in determining ultimate firm survival.
+* **Clustering:** Identified 4 distinct business archetypes (e.g., *Professional Micro-Startups* vs. *High-Density Corporate Hubs*) and 7 distinct geographic business clusters across the county.
 
-* Validated predictive survival model.
-
-* Identification of strongest survival and closure drivers.
-
-* Spatial clustering of high-risk and high-stability zones.
-
-
-**Practical Impact**
-
-* Entrepreneurs identify high-risk ventures earlier.
-
-* Investors prioritize resilient locations and sectors.
-
-* Developers assess long-term stability beyond surface metrics.
+**Strategic Action Plan for Stakeholders**
+1. **Targeted Micro-Capital:** Support programs should focus heavily on Sole Proprietorships in years 1–5.
+2. **Sector-Specific Assistance:** Tailor commercial lending and risk models around volatile sectors (Retail, Construction, Transportation).
+3. **Data-Informed Expansion:** Guide retail expansion into high-density, high-population unsupervised clusters identified by the spatial models.
 
 </details>
 
@@ -285,13 +197,8 @@ Active and inactive listings were merged into a single dataset. ZIP codes were s
 <details>
 <summary>Click to expand</summary>
 
-- City of San Diego. (n.d.). *San Diego Business Listings*. City of San Diego Open Data Portal.  
-- San Diego Association of Governments (SANDAG). (n.d.). *2020 Census Population by ZIP Code*. SANDAG Open Data Portal.  
-- Reyes, J., & Suárez, L. (2022). *The impact of location and road class on firm survival*. Journal of Business Geography.  
-- Society of Actuaries. (2019). *Standard practices in multivariate statistical and predictive modeling*.  
-- Nemade, S., Bharadi, P., Alegavi, S., & Marakarkandy, B. (2023). *SMOTE in predictive modeling*.  
-- Wang, H., & Guedes, R. (2024). *Logistic regression for SME failure prediction*.  
-- García-Vidal, J., et al. (2025). *Determinants of business closure intention*.  
-- Ramirez, K. (2025). *San Diego County Business Listing Dataset*.  
+1. City of San Diego. (n.d.). San Diego business listings dataset. City of San Diego Open Data Portal.
+2. Ramirez, K. (2025). *San Diego County Active/Closed Business Listing* [Data set]. GitHub. https://github.com/Kenier91/Business-Survival-Site-Selection-Analytics-for-San-Diego-County/tree/main/Data
+3. Reyes, J., & Suárez, L. (2022). *The impact of location and road class on firm survival*. Journal of Business Geography. 
 
 </details>
