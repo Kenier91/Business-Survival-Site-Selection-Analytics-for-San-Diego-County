@@ -21,7 +21,7 @@
 
 **Project Focus:** Predictive Modeling, Machine Learning & Spatial Intelligence for Investment, Development, and Site Selection in San Diego County.
 
-This project delivers a validated, data-driven decision-support system for assessing business survival risk and location stability. By evaluating a merged open-data corpus of 146,000+ registered businesses alongside public census and spatial data, this study contrasts traditional parametric modeling against advanced tree-based ensemble methods to identify key drivers of firm longevity.
+This project delivers a validated, data-driven decision-support system for assessing business survival risk and location stability. By evaluating a merged open-data corpus of 158,330 registered businesses alongside public census and spatial data, this study contrasts traditional parametric modeling against advanced tree-based ensemble methods to identify key drivers of firm longevity.
 
 The results are designed to support:
 * Site selection and geographic expansion
