@@ -72,7 +72,7 @@ The results indicate that tree-based ensemble classifiers performed better than 
 
 Business registries contain useful information about business characteristics, industry classifications, ownership structures, and geographic distribution. However, these records are not always incorporated into predictive decision-support systems.
 
-This project applies statistical analysis, machine learning, model interpretation, and geospatial analytics to examine recorded business status across San Diego County.
+This project applies statistical analysis, machine learning, model interpretation, and geospatial analytics to examine recorded business status and associated business and geographic characteristics among establishments represented across San Diego County.
 
 The study compares a Logistic Regression baseline against four tree-based ensemble classifiers:
 
@@ -104,7 +104,7 @@ The project is intended as an analytical decision-support resource, not as a sub
 
 ### A reproducible machine-learning classification tool
 
-The repository includes a prediction notebook and serialized model artifacts that allow users to execute predictions using the trained LightGBM model and its corresponding preprocessing pipeline.
+The repository includes a prediction notebook and serialized model artifacts that allow users to classify business records using the trained LightGBM model and its corresponding preprocessing pipeline. The model estimates the likelihood of the recorded Closed or Active classification based on the input characteristics.
 
 ### Required files
 
@@ -137,12 +137,7 @@ Can predictive machine-learning models constructed from the San Diego County bus
 
 The study established an F1-score benchmark of 0.70 for the Logistic Regression baseline.
 
-- **Null Hypothesis (H0):** Logistic Regression does not attain an F1-score of 0.70.
-- **Alternative Hypothesis (H1):** Logistic Regression attains an F1-score of at least 0.70.
-
-Logistic Regression achieved an F1-score of **0.587087**, below the prespecified benchmark.
-
-This is a benchmark-based model-performance criterion, not a conventional hypothesis test about a population parameter. The ensemble classifiers were compared using the same holdout test partition.
+A minimum F1-score of 0.70 was established as the benchmark for evaluating the Logistic Regression baseline. The model achieved an F1-score of 0.587087, which was below the prespecified benchmark. This criterion was used as a model-performance benchmark rather than a conventional statistical hypothesis test. The ensemble classifiers were subsequently compared using the same holdout test partition.
 
 </details>
 
@@ -157,7 +152,7 @@ This is a benchmark-based model-performance criterion, not a conventional hypoth
 
 The research integrates the following public data sources:
 
-1. **City of San Diego Active and Inactive Business Listings:** Municipal business tax certificate records reported for 1926–2025.
+1. **City of San Diego Active and Inactive Business Listings:** Municipal Business Tax Certificate records obtained from the City of San Diego Open Data Portal, covering recorded business listings from 1926–2025.
 2. **SANDAG 2020 Census Population by ZIP Code:** Demographic population baseline counts.
 3. **U.S. Census Bureau TIGER/Line Shapefiles:** Geographic boundaries for San Diego County and ZIP Code Tabulation Areas.
 
@@ -181,7 +176,7 @@ SMOTE was applied only to the training partition. The holdout test set was not o
 
 ### Principal analytical features
 
-The research includes business age, age segmentation, ownership type, NAICS industry sector, geographic coordinates, ZIP/ZCTA information, population, and business density.
+The principal analytical features included business operating duration (business age), operating-duration groups, ownership type, NAICS industry sector, geographic coordinates, ZIP code, population, and business density.
 
 </details>
 
@@ -204,7 +199,7 @@ Five classification models were evaluated using the same unaltered holdout test 
 | Random Forest | 0.811549 | 0.789672 | 0.740942 | 0.764531 | 0.884499 |
 | Logistic Regression | 0.661834 | 0.592019 | 0.582236 | 0.587087 | 0.683970 |
 
-LightGBM achieved the highest accuracy, recall, F1-score, and ROC-AUC. XGBoost achieved the highest precision.
+LightGBM achieved the highest accuracy, recall, F1-score, and ROC-AUC among the five evaluated classifiers, while XGBoost achieved the highest precision. These results identify LightGBM as the strongest model under the reported combination of evaluation metrics.
 
 ### SHAP interpretation
 
@@ -266,9 +261,19 @@ A formal time-to-event survival analysis is a potential future extension. Such a
 
 ### Statistical and analytical procedures
 
-The study includes chi-square tests of independence, normality diagnostics, Q–Q plots, Levene's test, Kruskal–Wallis tests, pairwise post-hoc comparisons, and Spearman rank correlation, as documented in the manuscript and analysis outputs.
+### Model Reproducibility and Evaluation
 
-SMOTE was applied exclusively to the training partition to address class imbalance.
+The supervised machine-learning workflow was implemented in Python using a consistent preprocessing and evaluation procedure. The modeling dataset contained 137,814 business records after excluding 2,923 records without valid geographic coordinates from the cleaned analytical dataset of 140,737 records.
+
+The dataset was divided into training and holdout testing partitions. The training partition initially contained 110,251 observations, while the holdout test partition contained 27,563 observations. SMOTE was applied exclusively to the training partition to address class imbalance, increasing its size to 139,996 observations. The holdout test partition retained its original class distribution and was not oversampled.
+
+Categorical predictors were transformed using one-hot encoding for machine-learning analysis. The preprocessing procedure was applied consistently to the training and testing data. The same holdout test partition was used to evaluate all five classification algorithms: Logistic Regression, Random Forest, Gradient Boosting, XGBoost, and LightGBM.
+
+Model performance was evaluated using accuracy, precision, recall, F1-score, and the area under the receiver operating characteristic curve (ROC-AUC). The classification target represented recorded business status, operationally classified as Closed or Active. These predictions describe recorded status classifications rather than future business survival or time-to-event outcomes.
+
+The LightGBM classifier was selected as the best-performing model based on the comparative evaluation results. Its trained model and corresponding preprocessing pipeline are provided as serialized artifacts in the repository. The prediction notebook demonstrates how to load these files and apply the trained classification workflow to new input records.
+
+The analysis notebooks document the data preparation, model development, evaluation, and interpretation procedures. The repository also includes the prediction notebook and model artifacts to support reproducibility and further examination of the analytical workflow.
 
 </details>
 
@@ -352,10 +357,10 @@ Click **Predict** to generate the results.
 
 The notebook displays two model-estimated probabilities:
 
-- **Failure:** Corresponds to the Closed/Cancelled classification.
-- **Success:** Corresponds to the Active classification.
+- **Failure (Closed):** The estimated probability that the business record belongs to the Closed classification
+- **Success (Active):** The estimated probability that the business record belongs to the Active classification.
 
-These results represent predicted recorded business-status classifications. They are not estimates of how many years a business will remain open or its probability of surviving a specific future period.
+These probabilities represent the model's classification estimates based on the supplied business characteristics. They do not estimate how many years a business will remain open or its probability of surviving a specified future period.
 
 **Important:** Always use `best_survival_model.pkl` and `preprocessor.pkl` together. The model was developed using San Diego County business registry data, and applying it to other geographic areas requires additional validation.
 
