@@ -392,13 +392,41 @@ The project is intended to support further research and informed decision-making
 
 ## 12. References
 
-1. City of San Diego. (n.d.). *San Diego business listings dataset*. City of San Diego Open Data Portal. https://data.sandiego.gov/datasets/business-listings
+Breiman, L. (2001). Random forests. Machine Learning, 45, 5–32. https://doi.org/10.1023/A:1010933404324
 
-2. Ramirez, K. (2025). *San Diego County Active/Closed Business Listing* [Data set]. GitHub. https://github.com/Kenier91/Business-Survival-Site-Selection-Analytics-for-San-Diego-County/tree/main/Data
+Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 785–794). Association for Computing Machinery. https://doi.org/10.1145/2939672.2939785
 
-3. SANDAG. (n.d.). *2020 Census population by ZIP code dataset*. San Diego Association of Governments Open Data Portal. https://opendata.sandag.org/Census/2020-Census-Population-by-ZIP-Code/26f5-2x9a/about_data
+City of San Diego. (n.d.). City of San Diego Active and Inactive Business Listings (Business Tax Certificates). Open Data San Diego. https://data.sandiego.gov/datasets/business-tax-certificates/
 
-4. U.S. Census Bureau. (n.d.). *TIGER/Line shapefiles*. https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+Corporate Finance Institute. (2023). Business lifecycle stages and analysis. https://corporatefinanceinstitute.com/resources/valuation/business-life-cycle/
+
+Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. The Annals of Statistics, 29(5), 1189–1232. https://doi.org/10.1214/aos/1013203451
+
+García Vidal, G., Sánchez Rodríguez, A., Guzmán Vilar, L., Pérez Campdesuñer, R., & Martínez Vivar, R. (2025). Toward building a model of business closure intention in SMEs: Binomial logistic regression. Administrative Sciences, 15(7), 240. https://doi.org/10.3390/admsci15070240
+
+Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). Applied logistic regression (3rd ed.). John Wiley & Sons. https://doi.org/10.1002/9781118548387
+
+Huang, Z. (1998). Extensions to the k-means algorithm for clustering large data sets with categorical values. Data Mining and Knowledge Discovery, 2(3), 283–304. https://doi.org/10.1023/A:1009769707641
+
+Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., & Liu, T.-Y. (2017). LightGBM: A highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems (Vol. 30, pp. 3146–3154).
+
+Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model predictions. In Advances in Neural Information Processing Systems (Vol. 30, pp. 4765–4774).
+
+Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., & Lee, S.-I. (2020). From local explanations to global understanding with explainable AI for trees. Nature Machine Intelligence, 2, 56–67. https://doi.org/10.1038/s42256-019-0138-9
+
+MacQueen, J. (1967). Some methods for classification and analysis of multivariate observations. In L. M. Le Cam & J. Neyman (Eds.), Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability (Vol. 1, pp. 281–297). University of California Press.
+
+Nemade, B., Bharadi, V., Alegavi, S. S., & Marakarkandy, B. (2023). A comprehensive review: SMOTE-based oversampling methods for imbalanced classification techniques, evaluation, and result comparisons. International Journal of Intelligent Systems and Applications in Engineering, 11(9s), 790–803. https://ijisae.org/index.php/IJISAE/article/view/3268
+
+Ramirez, K. (2025). San Diego County Active/Closed Business Listing [Data set]. GitHub. https://github.com/Kenier91/Business-Survival-Site-Selection-Analytics-for-San-Diego-County/tree/main/Data
+
+Reyes, V., & Suárez, M. (2022). Firm survival and location preference: Evidence from Mexico City. Heliyon, 8(4), e09219. https://doi.org/10.1016/j.heliyon.2022.e09219
+
+San Diego Association of Governments. (n.d.). 2020 Census population by ZIP code dataset. https://opendata.sandag.org/ARJIS/CIBRS-Group-A-Detailed-Report-Data/7sps-5pd9/about_data 
+
+Society of Actuaries. (2019). Considerations in predictive modeling: Feature engineering and selection [Research report]. https://www.soa.org/globalassets/assets/files/resources/research-report/2019/considerations-predictive-modeling.pdf
+
+U.S. Census Bureau. (2024, February 12). NAICS codes and understanding industry classification systems. https://www.census.gov/programs-surveys/economic-census/year/2022/guidance/understanding-naics.html
 
 ---
 
