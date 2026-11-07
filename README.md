@@ -392,6 +392,9 @@ The project is intended to support further research and informed decision-making
 
 ## 12. References
 
+<details>
+<summary>Click to expand</summary>
+
 Breiman, L. (2001). Random forests. Machine Learning, 45, 5–32. https://doi.org/10.1023/A:1010933404324
 
 Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 785–794). Association for Computing Machinery. https://doi.org/10.1145/2939672.2939785
@@ -438,5 +441,5 @@ I am passionate about building solutions that bridge Business Intelligence, Data
 
 *Strategic Location and Survival Dynamics of Businesses in San Diego County: A Comparative Machine Learning and Geospatial Approach.*
 
-
+</details>
 
