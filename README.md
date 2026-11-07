@@ -432,7 +432,7 @@ U.S. Census Bureau. (2024, February 12). NAICS codes and understanding industry 
 ## 📬 Contact & Connect
 I am passionate about building solutions that bridge Business Intelligence, Data Analytics, and Education—turning data into actionable insights that drive measurable student impact. 
 
-* **LinkedIn:** [Kenier Ramirez, M.Sc. Data Analytics](www.linkedin.com/in/kenier-ramirez-9456a725a)
+**LinkedIn:** [Kenier Ramirez](www.linkedin.com/in/kenier-ramirez-9456a725a)
   
 **For research methodology, detailed statistical results, model evaluation, and interpretation, consult the accompanying preprint:**
 
