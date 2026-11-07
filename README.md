@@ -429,7 +429,11 @@ Society of Actuaries. (2019). Considerations in predictive modeling: Feature eng
 U.S. Census Bureau. (2024, February 12). NAICS codes and understanding industry classification systems. https://www.census.gov/programs-surveys/economic-census/year/2022/guidance/understanding-naics.html
 
 ---
+## 📬 Contact & Connect
+I am passionate about building solutions that bridge Business Intelligence, Data Analytics, and Education—turning data into actionable insights that drive measurable student impact. 
 
+* **LinkedIn:** [Kenier Ramirez, M.Sc. Data Analytics](www.linkedin.com/in/kenier-ramirez-9456a725a)
+  
 **For research methodology, detailed statistical results, model evaluation, and interpretation, consult the accompanying preprint:**
 
 *Strategic Location and Survival Dynamics of Businesses in San Diego County: A Comparative Machine Learning and Geospatial Approach.*
